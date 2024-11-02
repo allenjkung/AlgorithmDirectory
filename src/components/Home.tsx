@@ -1,14 +1,10 @@
 import React from 'react';
 
-import { Button } from "./ui/button";
-import { HStack } from "@chakra-ui/react";
+import NavBar from './custom/NavBar';
 
 function Home() {
     return (
-        <HStack>
-            <Button>Click me</Button>
-            <Button>Click me</Button>
-        </HStack>
+        <NavBar/>
     );
 }
 
