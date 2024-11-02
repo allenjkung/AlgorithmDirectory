@@ -21,3 +21,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+#chakra ui components TODO:: add instructions on how to download this when writing documentation
+/src/components/ui
