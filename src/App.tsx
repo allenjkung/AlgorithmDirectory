@@ -1,24 +1,19 @@
 import React from 'react';
+import { Routes, Route, Link } from "react-router-dom";
 import logo from './logo.svg';
 import './App.css';
+
+import APITest from "./components/APITest";
+import APITest2 from "./components/APITest2";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+          <Route path="/" element={<APITest/>}/>
+          <Route path="/apitest" element={<APITest/>}/>
+          <Route path="/apitest2" element={<APITest2/>}/>
+      </Routes>
     </div>
   );
 }
