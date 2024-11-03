@@ -10,8 +10,8 @@ interface Props {
 function NavCard(props: Props) {
     const { linkName, linkUrl } = props;
     return (
-        <LinkBox width="100%">
-            <Flex _hover={{ bgColor:"lightgray", opacity:".850" }} h="100px" width="100%" alignItems="center" justifyContent="center">
+        <LinkBox _hover={{ bgColor:"lightgray", opacity:".850" }} width="100%" height="100%">
+            <Flex height="100%" width="100%" alignItems="center" justifyContent="center">
                 <LinkOverlay href={linkUrl} fontSize="lg">{linkName}</LinkOverlay>
             </Flex>
         </LinkBox>
