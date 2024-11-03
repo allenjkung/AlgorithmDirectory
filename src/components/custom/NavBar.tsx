@@ -24,7 +24,7 @@ const renderNavLinks = (selected = 0) => {
 function NavBar(props: Props) {
     const { selected } = props;
     return (
-        <Flex gap="4" direction="row" ml="12">
+        <Flex as="header" zIndex="200" position="fixed" top="0" width="100%" ml="12" direction="row" gap="4" backgroundColor="white">
             {renderNavLinks(selected)}
         </Flex>
     );
