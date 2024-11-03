@@ -4,7 +4,7 @@ import NavBar from './custom/NavBar';
 
 function Home() {
     return (
-        <NavBar/>
+        <NavBar selected={0}/>
     );
 }
 
