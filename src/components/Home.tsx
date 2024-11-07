@@ -14,7 +14,7 @@ function Home() {
             <Stack mx="10%">
                 <Flex direction="column" alignItems="center" textAlign="center" h="100vh" pt={{base:"10em", "2xl":"25em"}}>
                     <Text fontWeight="bold" fontSize={{sm: "1.5em", md: "2em"}}>Welcome to the Algorithm Directory</Text>
-                    <Text>A website containing a list of existing algorithms, data structures and other similar tech concepts.</Text>
+                    <Text>A website containing a list of algorithms, data structures and other similar tech concepts.</Text>
                 </Flex>
                 <Table.Root unstyled={true} h="80vh">
                     <Table.Row borderBottom="0">
@@ -40,7 +40,7 @@ function Home() {
                     <Text fontWeight="bold" fontSize={{sm: "1.5em", md: "2em"}}>About</Text>
                     <Text mb="2em">
                         <Text mb="1em">Algorithm Directory serves mainly as a resource for me to review and organize algorithms, data structures and other tech concepts that I learned throughout my career as a programmer. I have numerous handwritten notes on such topics and online files and directories located in several flashdrives and laptops. I wanted to transfer them all over to a single virtual location as it makes searching, archiving and editing easier.</Text>
-                        <Text>It originally was a directory in my laptop that I locally bootup and would slowly add on to. I decided to host it on the internet instead to potentially help others who are learning such topics. If I am able to help in some way, great. Otherwise, I apologize and tried my best .</Text>
+                        <Text>It originally was a directory in my laptop that I locally bootup and would slowly add on to. I decided to host it on the internet instead to potentially help others who are learning such topics. If I am able to help in some way, great. Otherwise, I apologize and tried my best.</Text>
                     </Text>
                 </Box>
                 <Box pt="10em">
@@ -60,7 +60,7 @@ function Home() {
                         </Text>
                         <Text mb="2em">
                             <Text fontWeight="bold">Plagarism</Text>
-                            <Text>I like to reference a professor I took in college about plagarizing and copying from sources in the Computer Science industry: "You are free to use and refer to any online code so long as you are able explain it line by line" (p.s. going off from memory so not an exact quote). The point is you are free to use any of the code in Algorithm Directory so long as you understand what it does and do not claim it as yours. Legal matters with plagarizing is far more complex so I will only talk about it for my website. Should you decide to put any code, definitions or other text from this website in a research paper or other published works, please do citations accordingly.</Text>
+                            <Text>I like to reference a professor I took in college about plagarizing and copying from sources in the Computer Science industry: "You are free to use and refer to any online code so long as you are able explain it line by line" (p.s. going off from memory so not an exact quote). The point is you are free to use any of the code in Algorithm Directory so long as you understand what it does and do not claim it as yours. Legal matters with plagarizing is far more complex so I will only talk about it for my website. Should you decide to put any code, definitions or other text from this website in a research paper or other published works, please do references and citations accordingly.</Text>
                         </Text>
                         <Text mb="2em">
                             <Text fontWeight="bold">If there is an algorithm or data structure not listed, it is likely I have not gotten to transferring it over from my notes or I am not aware of its existance.</Text>
