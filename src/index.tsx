@@ -8,6 +8,7 @@ import { BrowserRouter } from 'react-router-dom';
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+//TODO:: once living remove the <React.StrictMode> tags as is causing use effect to run twice throughout the pages.
 root.render(
   <React.StrictMode>
     <BrowserRouter>
