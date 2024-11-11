@@ -9,7 +9,7 @@ function APITest2() {
     useEffect(() => {
         const getData = async () => {
           try {
-            const result = await RequestService.fetchData();
+            const result = await RequestService.fetchData('/api');
             setData(result);
           } catch (err) {
             setError('Failed to fetch data');
