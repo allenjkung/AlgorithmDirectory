@@ -7,11 +7,13 @@ import RequestService from '../../services/RequestService';
 
 interface Props {
     type : string
+    typeHeader? : string
 }
 
 function LogicDisplay(props: Props) {
-    const { type } = props;
+    const { type, typeHeader } = props;
 
+    const [typeHeaderStr, setTypeHeaderStr] = useState<string>();
     const [outputStr, setOutput] = useState<string>();
     const [inputListStr, setInputListStr] = useState<string>("[8, 128, 64, 4, 32, 16]");
     const [error, setError] = useState<string | null>(null);
@@ -82,12 +84,16 @@ function LogicDisplay(props: Props) {
         if(!useEffectFlag) {
             latestinputListStrRef.current = inputListStr;
             runLogic();
+            if(typeHeader) {
+                const typeHeaderHTML = " (" + typeHeader + ")";
+                setTypeHeaderStr(typeHeaderHTML);
+            }
             setUseEffectFlag(true);
         }
     }, [runLogic, inputListStr, useEffectFlag]);
     return (
         <Stack mb="1em">
-            <Box fontWeight="bold" fontSize="lg" textAlign="center">Run Test</Box>
+            <Box fontWeight="bold" fontSize="lg" textAlign="center">Run Test{typeHeaderStr}</Box>
             <Box mb=".5em">Enter numbers in the same format in the input below and click on run to see how the algorithm sorts the array per loop.</Box>
             <Flex><Input variant="outline" value={inputListStr} onChange={handleInputChange}/><Button variant="subtle" onClick={runLogic}>Run</Button></Flex>
             <Code padding="1em" fontSize="md" whiteSpace="pre-wrap" lineHeight={1.25}>{error ? error : outputStr ? outputStr : "Loading..."}</Code>
