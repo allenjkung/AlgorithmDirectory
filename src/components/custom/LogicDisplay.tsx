@@ -63,8 +63,16 @@ function LogicDisplay(props: Props) {
                 const loops = outputArr.length;
                 if(loops > 0) {
                     let loopsStr = ("Initial: [" + outputArr[0] + "]\r\n");
-                    for(let i = 1; i < loops; i += 1) {
-                        loopsStr += ("loop: " + i + ": [" + outputArr[i] + "]\r\n");
+                    if(type == "Heapsort") {
+                        loopsStr += ("Heapify: [" + outputArr[1] + "]\r\n");
+                        for(let i = 2; i < loops; i += 1) {
+                            loopsStr += ("loop: " + (i - 1) + ": [" + outputArr[i] + "]\r\n");
+                        }
+                    }
+                    else {
+                        for(let i = 1; i < loops; i += 1) {
+                            loopsStr += ("loop: " + i + ": [" + outputArr[i] + "]\r\n");
+                        }
                     }
                     loopsStr += ("Final: [" + outputArr[(loops - 1)] + "]\r\n");
                     setOutput(loopsStr);
