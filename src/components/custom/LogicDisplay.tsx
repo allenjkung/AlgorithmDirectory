@@ -26,6 +26,18 @@ function LogicDisplay(props: Props) {
         setInputListStr(NewValue);
     }
 
+    function formattedArr(arr: number[]) {
+        const valuesLength = arr.length;
+        let output = '';
+        if(valuesLength > 0) {
+            output = String(arr[0]);
+            for(let i = 1; i < valuesLength; i += 1) {
+                output += (', ' + arr[i]);
+            } 
+        }
+        return output;
+    }
+
     const runLogic = useCallback(async () => {
         let inputListArr: number[] = [];
         try {
@@ -62,19 +74,24 @@ function LogicDisplay(props: Props) {
                 const outputArr = result.output
                 const loops = outputArr.length;
                 if(loops > 0) {
-                    let loopsStr = ("Initial: [" + outputArr[0] + "]\r\n");
+                    let loopsStr = ("Initial: [" + formattedArr(outputArr[0]) + "]\r\n");
                     if(type == "Heapsort") {
-                        loopsStr += ("Heapify: [" + outputArr[1] + "]\r\n");
+                        loopsStr += ("Heapify: [" + formattedArr(outputArr[1]) + "]\r\n");
                         for(let i = 2; i < loops; i += 1) {
-                            loopsStr += ("loop: " + (i - 1) + ": [" + outputArr[i] + "]\r\n");
+                            loopsStr += ("loop: " + (i - 1) + ": [" + formattedArr(outputArr[i]) + "]\r\n");
                         }
+                    }
+                    else if(type == "CountingSort") {
+                        loopsStr += ("Count List: [" + formattedArr(outputArr[1]) + "]\r\n");
+                        loopsStr += ("Count List loop: 1: [" + formattedArr(outputArr[2]) + "]\r\n");
+                        loopsStr += ("Output List: [" + formattedArr(outputArr[3]) + "]\r\n");
                     }
                     else {
                         for(let i = 1; i < loops; i += 1) {
-                            loopsStr += ("loop: " + i + ": [" + outputArr[i] + "]\r\n");
+                            loopsStr += ("loop: " + i + ": [" + formattedArr(outputArr[i]) + "]\r\n");
                         }
                     }
-                    loopsStr += ("Final: [" + outputArr[(loops - 1)] + "]\r\n");
+                    loopsStr += ("Final: [" + formattedArr(outputArr[(loops - 1)]) + "]\r\n");
                     setOutput(loopsStr);
                 }
             }
@@ -104,7 +121,7 @@ function LogicDisplay(props: Props) {
             <Box fontWeight="bold" fontSize="lg" textAlign="center">Run Test{typeHeaderStr}</Box>
             <Box mb=".5em">Enter numbers in the same format in the input below and click on run to see how the algorithm sorts the array per loop.</Box>
             <Flex><Input variant="outline" value={inputListStr} onChange={handleInputChange}/><Button variant="subtle" onClick={runLogic}>Run</Button></Flex>
-            <Code padding="1em" fontSize="md" whiteSpace="pre-wrap" lineHeight={1.25}>{error ? error : outputStr ? outputStr : "Loading..."}</Code>
+            <Code padding="1em" fontSize="md" whiteSpace="pre-wrap" wordBreak="break-word" overflowWrap="anywhere" lineHeight={1.25} maxWidth="100%" overflowX="auto">{error ? error : outputStr ? outputStr : "Loading..."}</Code>
         </Stack>
     );
 }
