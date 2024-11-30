@@ -14,6 +14,7 @@ import Quicksort from './components/algorithms/QuickSort';
 import Heapsort from './components/algorithms/Heapsort';
 import CountingSort from './components/algorithms/CountingSort';
 import RadixSort from './components/algorithms/RadixSort';
+import BucketSort from './components/algorithms/BucketSort';
 import APITest from "./components/APITest";
 import APITest2 from "./components/APITest2";
 
@@ -31,6 +32,7 @@ function App() {
         <Route path="/Heapsort" element={<Heapsort/>}/>
         <Route path="/CountingSort" element={<CountingSort/>}/>
         <Route path="/RadixSort" element={<RadixSort/>}/>
+        <Route path="/BucketSort" element={<BucketSort/>}/>
         <Route path="/apitest" element={<APITest/>}/>
         <Route path="/apitest2" element={<APITest2/>}/>
       </Routes>
