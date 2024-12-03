@@ -10,7 +10,7 @@ import SelectionSort from './components/algorithms/SelectionSort';
 import BubbleSort from './components/algorithms/BubbleSort';
 import InsertionSort from './components/algorithms/InsertionSort';
 import MergeSort from './components/algorithms/MergeSort';
-import Quicksort from './components/algorithms/QuickSort';
+import Quicksort from './components/algorithms/Quicksort';
 import Heapsort from './components/algorithms/Heapsort';
 import CountingSort from './components/algorithms/CountingSort';
 import RadixSort from './components/algorithms/RadixSort';
