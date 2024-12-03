@@ -75,13 +75,13 @@ function LogicDisplay(props: Props) {
                 const loops = outputArr.length;
                 if(loops > 0) {
                     let loopsStr = ("Initial: [" + formattedArr(outputArr[0]) + "]\r\n");
-                    if(type == "Heapsort") {
+                    if(type === "Heapsort") {
                         loopsStr += ("Heapify: [" + formattedArr(outputArr[1]) + "]\r\n");
                         for(let i = 2; i < loops; i += 1) {
                             loopsStr += ("loop: " + (i - 1) + ": [" + formattedArr(outputArr[i]) + "]\r\n");
                         }
                     }
-                    else if(type == "CountingSort") {
+                    else if(type === "CountingSort") {
                         loopsStr += ("Count List: [" + formattedArr(outputArr[1]) + "]\r\n");
                         loopsStr += ("Count List loop: 1: [" + formattedArr(outputArr[2]) + "]\r\n");
                         loopsStr += ("Output List: [" + formattedArr(outputArr[3]) + "]\r\n");
@@ -115,7 +115,7 @@ function LogicDisplay(props: Props) {
             }
             setUseEffectFlag(true);
         }
-    }, [runLogic, inputListStr, useEffectFlag]);
+    }, [runLogic, inputListStr, useEffectFlag, typeHeader]);
     return (
         <Stack mb="1em">
             <Box fontWeight="bold" fontSize="lg" textAlign="center">Run Test{typeHeaderStr}</Box>

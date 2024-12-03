@@ -5,9 +5,22 @@ import { Stack, Box, Flex, Table, Text } from '@chakra-ui/react';
 import NavBar from './custom/NavBar';
 import NavCard from './custom/NavCard';
 
+import { algorithms, algorithmsJSON } from '../config';
+
 //TODO:: add what website was build with for frontend/backend once mvp finished
 
 function Home() {
+    const algorithmCount = algorithms.length;
+    const recentAlgorithms = algorithms.slice(-3);
+    const randomAlgorithms = [];
+    const randomAlgorithmIndex = [];
+    while(randomAlgorithmIndex.length < 3) {
+        const randomIndex = Math.floor(Math.random() * algorithmCount);
+        if(randomAlgorithmIndex.indexOf(randomIndex) === -1) {
+            randomAlgorithmIndex.push(randomIndex);
+            randomAlgorithms.push(algorithms[randomIndex]);
+        }
+    }
     return (
         <Box>
             <NavBar selected={0}/>
@@ -23,16 +36,16 @@ function Home() {
                     </Table.Row>
                     <Table.Body>
                         <Table.Row>
-                            <Table.Cell px="1em" py=".5em"><NavCard linkName='Selection Sort' linkUrl='./SelectionSort'/></Table.Cell>
-                            <Table.Cell px="1em" py=".5em"><NavCard linkName='Selection Sort' linkUrl='./SelectionSort'/></Table.Cell>
+                            <Table.Cell px="1em" py=".5em"><NavCard linkName={randomAlgorithms[0]} linkUrl={"./" + algorithmsJSON[randomAlgorithms[0]].link}/></Table.Cell>
+                            <Table.Cell px="1em" py=".5em"><NavCard linkName={recentAlgorithms[2]} linkUrl={"./" + algorithmsJSON[recentAlgorithms[2]].link}/></Table.Cell>
                         </Table.Row>
                         <Table.Row>
-                            <Table.Cell px="1em" py=".5em"><NavCard linkName='Insertion Sort' linkUrl='./InsertionSort'/></Table.Cell>
-                            <Table.Cell px="1em" py=".5em"><NavCard linkName='Insertion Sort' linkUrl='./InsertionSort'/></Table.Cell>
+                            <Table.Cell px="1em" py=".5em"><NavCard linkName={randomAlgorithms[1]} linkUrl={"./" + algorithmsJSON[randomAlgorithms[1]].link}/></Table.Cell>
+                            <Table.Cell px="1em" py=".5em"><NavCard linkName={recentAlgorithms[1]} linkUrl={"./" + algorithmsJSON[recentAlgorithms[1]].link}/></Table.Cell>
                         </Table.Row>
                         <Table.Row>
-                            <Table.Cell px="1em" py=".5em"><NavCard linkName='Bubble Sort' linkUrl='./BubbleSort'/></Table.Cell>
-                            <Table.Cell px="1em" py=".5em"><NavCard linkName='Bubble Sort' linkUrl='./BubbleSort'/></Table.Cell>
+                            <Table.Cell px="1em" py=".5em"><NavCard linkName={randomAlgorithms[2]} linkUrl={"./" + algorithmsJSON[randomAlgorithms[2]].link}/></Table.Cell>
+                            <Table.Cell px="1em" py=".5em"><NavCard linkName={recentAlgorithms[0]} linkUrl={"./" + algorithmsJSON[recentAlgorithms[0]].link}/></Table.Cell>
                         </Table.Row>
                     </Table.Body>
                 </Table.Root>
