@@ -10,7 +10,7 @@ interface Props {
 
 const navOptions = [
     {id: 0, name:"Home", url:"/Home"},
-    {id: 1, name:"Algorithms", url:"/Algorithm"},
+    {id: 1, name:"Sort Algorithms", url:"/SortAlgorithms"},
     {id: 2, name:"Data Structures", url:"/DataStructure"}
 ];
 
