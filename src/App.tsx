@@ -6,6 +6,7 @@ import theme from "./services/Theme";
 import './App.css';
 
 import Home from "./components/Home";
+import SortAlgorithms from './components/SortAlgorithms';
 import SelectionSort from './components/algorithms/SelectionSort';
 import BubbleSort from './components/algorithms/BubbleSort';
 import InsertionSort from './components/algorithms/InsertionSort';
@@ -22,6 +23,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/home" element={<Home/>}/>
+        <Route path="/SortAlgorithms" element={<SortAlgorithms/>}/>
         <Route path="/SelectionSort" element={<SelectionSort/>}/>
         <Route path="/BubbleSort" element={<BubbleSort/>}/>
         <Route path="/InsertionSort" element={<InsertionSort/>}/>
