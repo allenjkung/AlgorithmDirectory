@@ -7,6 +7,7 @@ import './App.css';
 
 import Home from "./components/Home";
 import SortAlgorithms from './components/SortAlgorithms';
+import Disclaimer from './components/Disclaimer';
 import SelectionSort from './components/algorithms/SelectionSort';
 import BubbleSort from './components/algorithms/BubbleSort';
 import InsertionSort from './components/algorithms/InsertionSort';
@@ -24,6 +25,7 @@ function App() {
         <Route path="/" element={<Home/>}/>
         <Route path="/home" element={<Home/>}/>
         <Route path="/SortAlgorithms" element={<SortAlgorithms/>}/>
+        <Route path="/disclaimer" element={<Disclaimer/>}/>
         <Route path="/SelectionSort" element={<SelectionSort/>}/>
         <Route path="/BubbleSort" element={<BubbleSort/>}/>
         <Route path="/InsertionSort" element={<InsertionSort/>}/>
