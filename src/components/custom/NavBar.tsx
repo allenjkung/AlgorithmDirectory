@@ -11,7 +11,7 @@ interface Props {
 const navOptions = [
     {id: 0, name:"Home", url:"/Home"},
     {id: 1, name:"Sort Algorithms", url:"/SortAlgorithms"},
-    {id: 2, name:"Data Structures", url:"/DataStructure"}
+    {id: 2, name:"Disclaimers", url:"/disclaimer"}
 ];
 
 const renderNavLinks = (selected = 0) => {

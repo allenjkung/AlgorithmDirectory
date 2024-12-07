@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Stack, Box, Flex, Table, Text } from '@chakra-ui/react';
+import { Stack, Box, Flex, Text } from '@chakra-ui/react';
 
 import NavBar from './custom/NavBar';
 import NavCard from './custom/NavCard';
