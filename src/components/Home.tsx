@@ -5,13 +5,14 @@ import { Stack, Box, Flex, Table, Text } from '@chakra-ui/react';
 import NavBar from './custom/NavBar';
 import NavCard from './custom/NavCard';
 
-import { algorithms, algorithmsJSON } from '../config';
+import { algorithms, algorithmsJSON, dataStructures, dataStructureJSON} from '../config';
 
 //TODO:: add what website was build with for frontend/backend once mvp finished
 
 function Home() {
     const algorithmCount = algorithms.length;
-    const recentAlgorithms = algorithms.slice(-3);
+    const recentDataStructures = dataStructures;
+    const recentAlgorithms = algorithms.slice(-2);
     const randomAlgorithms = [];
     const randomAlgorithmIndex = [];
     while(randomAlgorithmIndex.length < 3) {
@@ -44,7 +45,7 @@ function Home() {
                     <Table.Body>
                         <Table.Row>
                             <Table.Cell px="1em" py=".5em"><NavCard linkName={randomAlgorithms[0]} linkUrl={"./" + algorithmsJSON[randomAlgorithms[0]].link}/></Table.Cell>
-                            <Table.Cell px="1em" py=".5em"><NavCard linkName={recentAlgorithms[2]} linkUrl={"./" + algorithmsJSON[recentAlgorithms[2]].link}/></Table.Cell>
+                            <Table.Cell px="1em" py=".5em"><NavCard linkName={recentDataStructures[0]} linkUrl={"./" + dataStructureJSON[recentDataStructures[0]].link}/></Table.Cell>
                         </Table.Row>
                         <Table.Row>
                             <Table.Cell px="1em" py=".5em"><NavCard linkName={randomAlgorithms[1]} linkUrl={"./" + algorithmsJSON[randomAlgorithms[1]].link}/></Table.Cell>

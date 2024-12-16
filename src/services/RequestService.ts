@@ -38,10 +38,22 @@ const runAlgorithm = async (mapPath: string, postData: SortAlgorithmPost): Promi
     }
 }
 
+const fetchDataStructureSourceCode = async (mapPath: string): Promise<SourceCodeResponse> => {
+    try {
+        const response = await http.get<SourceCodeResponse>(mapPath);
+        return response.data;
+    }
+    catch (error) {
+        console.error('Error fetching data:', error);
+        throw error;
+    }
+}
+
 const RequestService = {
     fetchData,
     fetchAlgorithmSourceCode,
-    runAlgorithm
+    runAlgorithm,
+    fetchDataStructureSourceCode
 };
 
 export default RequestService;
