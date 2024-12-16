@@ -7,6 +7,7 @@ import './App.css';
 
 import Home from "./components/Home";
 import SortAlgorithms from './components/SortAlgorithms';
+import DataStructures from './components/DataStructures';
 import Disclaimer from './components/Disclaimer';
 import SelectionSort from './components/algorithms/SelectionSort';
 import BubbleSort from './components/algorithms/BubbleSort';
@@ -17,6 +18,7 @@ import Heapsort from './components/algorithms/Heapsort';
 import CountingSort from './components/algorithms/CountingSort';
 import RadixSort from './components/algorithms/RadixSort';
 import BucketSort from './components/algorithms/BucketSort';
+import Node from './components/dataStructures/Node';
 
 function App() {
   return (
@@ -25,6 +27,7 @@ function App() {
         <Route path="/" element={<Home/>}/>
         <Route path="/home" element={<Home/>}/>
         <Route path="/SortAlgorithms" element={<SortAlgorithms/>}/>
+        <Route path="/DataStructures" element={<DataStructures/>}/>
         <Route path="/disclaimer" element={<Disclaimer/>}/>
         <Route path="/SelectionSort" element={<SelectionSort/>}/>
         <Route path="/BubbleSort" element={<BubbleSort/>}/>
@@ -35,6 +38,7 @@ function App() {
         <Route path="/CountingSort" element={<CountingSort/>}/>
         <Route path="/RadixSort" element={<RadixSort/>}/>
         <Route path="/BucketSort" element={<BucketSort/>}/>
+        <Route path="/Node" element={<Node/>}/>
       </Routes>
     </ChakraProvider>
   );

@@ -27,3 +27,18 @@ export const algorithmsJSON: AlgorithmnJSON = {
     "Radix Sort": {link: "RadixSort"} as AlgorithmInfo,
     "Bucket Sort": {link: "BucketSort"} as AlgorithmInfo
 };
+
+export const dataStructures = [
+    "Node"
+]
+
+interface DataStructureInfo {
+    link: string
+}
+interface DataStructureJSON {
+    [key: string]: DataStructureInfo
+}
+
+export const dataStructureJSON: DataStructureJSON = {
+    "Node": {link: "Node"} as AlgorithmInfo
+}
