@@ -60,13 +60,13 @@ function SinglyLinkedList() {
                 <List.Item>Size (optional): used to get the number of Nodes in a Linked List.</List.Item>
                 <List.Item>Printer (optional): used to output the Linked List as a readable string.</List.Item>
             </List.Root>
-            <Text>Linked List is most often compared with an Array. Note that with proper manipulation, both can fit to have the same functionality as the other data structure. Array is more practical to use as it is now a prebuilt library in practically every programming language. There are two distinct advantages in using Node List:</Text>
+            <Text>Linked List is most often compared with an Array. Note that with proper manipulation, both can fit to have the same functionality as the other data structure. Array is more practical to use as it is now a prebuilt library in practically every programming language. There are two distinct advantages in using Linked List:</Text>
             <List.Root ml="1em">
-                <List.Item>Constant Time insertions and deletions.</List.Item>
+                <List.Item>Constant Time insertions and deletions in certain positions (Ex: Add a Node at Head).</List.Item>
                 <List.Item>Scalability when adding Nodes. Arrays need to redeclare and copy memory should the number of items grow too large.</List.Item>
             </List.Root>
-            <Text>It is important to note that these advantages only apply to traditional arrays as they simply do not have the ability to do the above (Ex: Java). Many array libraries have applied methods to perform the same functionality (Ex: PHP) while the others have an alternative library (Ex: ArrayList for Java). For performance, each language will vary but most have array optimized to reduce the difference signifigantly.</Text>
-            <Text>Therefore, Linked List should be used as a learning to tool as there are many variants of it. The knowledge of how it can be manipulated is a major soft skill in approaching problem and challenges even outside the computer science industry.</Text>
+            <Text>It is important to note that these advantages only apply to traditional arrays as they simply do not have the ability to do the above (Ex: Java). Many array libraries have applied methods to perform the same functionality (Ex: PHP) while the others have an alternative library (Ex: ArrayList for Java). For performance, each language will vary but most have array optimized to reduce the difference significantly.</Text>
+            <Text>Therefore, Linked List should be used as a learning to tool as there are many variants of it. The knowledge of how it can be manipulated is a major soft skill in approaching problems and challenges even outside the computer science industry.</Text>
             <Text fontWeight="bold" fontSize="lg">Variants</Text>
             <List.Root ml="1em">
                 <List.Item fontWeight="bold" fontSize="md">Doubly Linked List</List.Item>

@@ -11,8 +11,7 @@ import { algorithms, algorithmsJSON, dataStructures, dataStructureJSON} from '..
 
 function Home() {
     const algorithmCount = algorithms.length;
-    const recentDataStructures = dataStructures;
-    const recentAlgorithms = algorithms.slice(-1);
+    const recentDataStructures = dataStructures.slice(-3);
     const randomAlgorithms = [];
     const randomAlgorithmIndex = [];
     while(randomAlgorithmIndex.length < 3) {
@@ -45,15 +44,15 @@ function Home() {
                     <Table.Body>
                         <Table.Row>
                             <Table.Cell px="1em" py=".5em"><NavCard linkName={randomAlgorithms[0]} linkUrl={"./" + algorithmsJSON[randomAlgorithms[0]].link}/></Table.Cell>
-                            <Table.Cell px="1em" py=".5em"><NavCard linkName={recentDataStructures[1]} linkUrl={"./" + dataStructureJSON[recentDataStructures[1]].link}/></Table.Cell>
+                            <Table.Cell px="1em" py=".5em"><NavCard linkName={recentDataStructures[2]} linkUrl={"./" + dataStructureJSON[recentDataStructures[2]].link}/></Table.Cell>
                         </Table.Row>
                         <Table.Row>
                             <Table.Cell px="1em" py=".5em"><NavCard linkName={randomAlgorithms[1]} linkUrl={"./" + algorithmsJSON[randomAlgorithms[1]].link}/></Table.Cell>
-                            <Table.Cell px="1em" py=".5em"><NavCard linkName={recentDataStructures[0]} linkUrl={"./" + dataStructureJSON[recentDataStructures[0]].link}/></Table.Cell>
+                            <Table.Cell px="1em" py=".5em"><NavCard linkName={recentDataStructures[1]} linkUrl={"./" + dataStructureJSON[recentDataStructures[1]].link}/></Table.Cell>
                         </Table.Row>
                         <Table.Row>
                             <Table.Cell px="1em" py=".5em"><NavCard linkName={randomAlgorithms[2]} linkUrl={"./" + algorithmsJSON[randomAlgorithms[2]].link}/></Table.Cell>
-                            <Table.Cell px="1em" py=".5em"><NavCard linkName={recentAlgorithms[0]} linkUrl={"./" + algorithmsJSON[recentAlgorithms[0]].link}/></Table.Cell>
+                            <Table.Cell px="1em" py=".5em"><NavCard linkName={recentDataStructures[0]} linkUrl={"./" + dataStructureJSON[recentDataStructures[0]].link}/></Table.Cell>
                         </Table.Row>
                     </Table.Body>
                 </Table.Root>
