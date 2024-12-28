@@ -30,7 +30,8 @@ export const algorithmsJSON: AlgorithmnJSON = {
 
 export const dataStructures = [
     "Node",
-    "Singly Linked List"
+    "Singly Linked List",
+    "Doubly Linked List"
 ]
 
 interface DataStructureInfo {
@@ -42,5 +43,6 @@ interface DataStructureJSON {
 
 export const dataStructureJSON: DataStructureJSON = {
     "Node": {link: "Node"} as AlgorithmInfo,
-    "Singly Linked List": {link: "SinglyLinkedList"} as AlgorithmInfo
+    "Singly Linked List": {link: "SinglyLinkedList"} as AlgorithmInfo,
+    "Doubly Linked List": {link: "DoublyLinkedList"} as AlgorithmInfo
 }

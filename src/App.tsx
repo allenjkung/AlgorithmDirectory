@@ -20,6 +20,7 @@ import RadixSort from './components/algorithms/RadixSort';
 import BucketSort from './components/algorithms/BucketSort';
 import Node from './components/dataStructures/Node';
 import SinglyLinkedList from './components/dataStructures/SinglyLinkedList';
+import DoublyLinkedList from './components/dataStructures/DoublyLinkedList';
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
         <Route path="/BucketSort" element={<BucketSort/>}/>
         <Route path="/Node" element={<Node/>}/>
         <Route path="/SinglyLinkedList" element={<SinglyLinkedList/>}/>
+        <Route path="/DoublyLinkedList" element={<DoublyLinkedList/>}/>
       </Routes>
     </ChakraProvider>
   );
