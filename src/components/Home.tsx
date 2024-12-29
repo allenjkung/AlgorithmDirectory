@@ -1,13 +1,12 @@
 import React from 'react';
 
-import { Stack, Box, Flex, Table, Text } from '@chakra-ui/react';
+import { Stack, Box, Flex, Table, Text, List, Link } from '@chakra-ui/react';
+import { LuExternalLink } from "react-icons/lu";
 
 import NavBar from './custom/NavBar';
 import NavCard from './custom/NavCard';
 
 import { algorithms, algorithmsJSON, dataStructures, dataStructureJSON} from '../config';
-
-//TODO:: add what website was build with for frontend/backend once mvp finished
 
 function Home() {
     const algorithmCount = algorithms.length;
@@ -36,7 +35,7 @@ function Home() {
                         <Text>It originally was a directory in my laptop that I locally bootup and would slowly add on to. I decided to host it on the internet instead to potentially help others who are learning such topics. If I am able to help in some way, great. Otherwise, I apologize and tried my best.</Text>
                     </Text>
                 </Box>
-                <Table.Root unstyled={true} h="80vh">
+                <Table.Root unstyled={true} h="100vh">
                     <Table.Row borderBottom="0">
                         <Table.ColumnHeader w="50%" fontWeight="bold" fontSize={{sm: "1.5em", md: "2em"}} textAlign="center">Random Algorithms</Table.ColumnHeader>
                         <Table.ColumnHeader w="50%" fontWeight="bold" fontSize={{sm: "1.5em", md: "2em"}} textAlign="center">Recently Added</Table.ColumnHeader>
@@ -56,6 +55,20 @@ function Home() {
                         </Table.Row>
                     </Table.Body>
                 </Table.Root>
+                <Box mb="1em">
+                    <Text fontWeight="bold" fontSize={{sm: "1.5em", md: "2em"}}>Website Info:</Text>
+                    <Text mb="1em">This section serves to provide relevant information on the website tech stack.</Text>
+                    <Text>Below is what each part of the website was built with:</Text>
+                    <List.Root ml="1em" mb="1em">
+                        <List.Item>Client (Frontend): TypeScript (Node.js, NPM), Styling (CSS, Chakra UI)</List.Item>
+                        <List.Item>Server (Backend): Java (Spring Boot, Maven)</List.Item>
+                    </List.Root>
+                    <Text>Below are the links to access the Client and Server source code:</Text>
+                    <List.Root ml="1em" mb="3em">
+                        <List.Item><Link href="https://github.com/allenjkung/AlgorithmDirectory" target="_blank" display="inline-flex">Client (Frontend)<LuExternalLink/></Link></List.Item>
+                        <List.Item><Link href="https://github.com/allenjkung/AlgorithmDirectoryServer" target="_blank" display="inline-flex">Server (Backend)<LuExternalLink/></Link></List.Item>
+                    </List.Root>
+                </Box>
             </Stack>
         </Box>
     );

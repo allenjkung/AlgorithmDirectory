@@ -35,7 +35,7 @@ function App() {
         <Route path="/BubbleSort" element={<BubbleSort/>}/>
         <Route path="/InsertionSort" element={<InsertionSort/>}/>
         <Route path="/MergeSort" element={<MergeSort/>}/>
-        <Route path="/QuickSort" element={<Quicksort/>}/>
+        <Route path="/Quicksort" element={<Quicksort/>}/>
         <Route path="/Heapsort" element={<Heapsort/>}/>
         <Route path="/CountingSort" element={<CountingSort/>}/>
         <Route path="/RadixSort" element={<RadixSort/>}/>
