@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Box, Text } from '@chakra-ui/react';
+import { Box, Text, List, Link } from '@chakra-ui/react';
 
 import NavBar from './custom/NavBar';
 
@@ -12,10 +12,10 @@ function Disclaimer() {
                 <Text fontWeight="bold" fontSize={{sm: "1.5em", md: "2em"}}>Disclaimer</Text>
                 <Text mb="2em">
                     <Text fontWeight="bold">I do not and will not claim to own any of the algorithms, data structures and other tech concepts mentioned throughout the website.</Text>
-                    <Text>The only exception to this is if I did in fact actually invent and develop a new algorithm, data structure or tech concept which in that case, I will mentioned.</Text>
+                    <Text>The only exception to this is if I did in fact actually invent and develop a new algorithm, data structure or tech concept which in that case, I will mention it in that specific topic.</Text>
                 </Text>
                 <Text mb="2em">
-                    <Text fontWeight="bold">The code and content from any of the algorithms, data structures and other tech concepts mentioned throughout Algorithm Directory are from physical and virtual notes I written while studying them.</Text>
+                    <Text fontWeight="bold">The code and content from any of the algorithms, data structures and other tech concepts mentioned throughout Algorithm Directory are from physical and virtual notes I written or learned while studying them.</Text>
                     <Text>What I write should not be considered law or absolute. I will make mistakes and will often correct code ranging from syntax errors while copying handwritten code over to an entire algorithm having a fatal flaw that requires overhaul. I will post a Wikipedia link or another relevant website to ensure you have another source to cross reference with and refer to for additional information.</Text>
                 </Text>
                 <Text mb="2em">
@@ -24,7 +24,12 @@ function Disclaimer() {
                 </Text>
                 <Text mb="2em">
                     <Text fontWeight="bold">Plagarism</Text>
-                    <Text>I like to reference a professor I took in college about plagarizing and copying from sources in the Computer Science industry: "You are free to use and refer to any online code so long as you are able explain it line by line" (p.s. going off from memory so not an exact quote). The point is you are free to use any of the code in Algorithm Directory so long as you understand what it does and do not claim it as yours. Legal matters with plagarizing is far more complex so I will only talk about it for my website. Should you decide to put any code, definitions or other text from this website in a research paper or other published works, please do references and citations accordingly.</Text>
+                    <Text mb="1em">I like to reference a professor I took in college about plagarizing and copying from sources in the Computer Science industry: "You are free to use and refer to any online code so long as you are able explain it line by line" (p.s. going off from memory so not an exact quote). The point is you are free to use any of the code in Algorithm Directory so long as you understand what it does and do not claim it as yours.</Text>
+                    <Text>Legal matters with plagarism is far more complex so I will only talk about it for my website Algorithm Directory:</Text>
+                    <List.Root ml="1em">
+                        <List.Item>There are public GitHub links available to access the <Link href="https://github.com/allenjkung/AlgorithmDirectory" target="_blank" display="inline-flex">client</Link> and <Link href="https://github.com/allenjkung/AlgorithmDirectoryServer" target="_blank" display="inline-flex">server</Link> source code of Algorithm Directory. You are free to download it for your own local use and modify it however you see fit. Please do not host the website on the internet without my approval and permission with the exception of major modifications to where it is no longer recognizable from Algorithm Directory.</List.Item>
+                        <List.Item>Should you decide to put any code, definitions or other text from Algorithm Directory in a research paper or other published works, please do references and citations accordingly.</List.Item>
+                    </List.Root>
                 </Text>
                 <Text mb="2em">
                     <Text fontWeight="bold">If there is an algorithm or data structure not listed, it is likely I have not gotten to transferring it over from my notes or I am not aware of its existance.</Text>
